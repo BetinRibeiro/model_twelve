@@ -1,0 +1,28 @@
+{{extend 'layout.html'}}
+{{"""
+
+You should not modify this file. 
+It is used as default when a view is not provided for your controllers
+
+"""}}
+<h2>{{=' '.join(x.capitalize() for x in request.function.split('_'))}}</h2>
+{{if len(response._vars)==1:}}
+{{=BEAUTIFY(response._vars[next(iter(response._vars))])}}
+{{elif len(response._vars)>1:}}
+{{=BEAUTIFY(response._vars)}}
+{{pass}}
+
+
+<script>
+  $(document).ready(function(){
+      $('#registro_prospeccao_telefone').mask("(00) 00000-0000", {reverse: false});
+      $('#cliente_telefone').mask("(00) 00000-0000", {reverse: false});
+      $('#cliente_telefone').mask("(00) 00000-0000", {reverse: false});
+      $("#registro_prospeccao_data_contato").mask("00/00/0000");
+      $("#cliente_data_fechamento").mask("00/00/0000");
+      $("#registro_fluxo_data_pagamento").mask("00/00/0000");
+      $("#projeto_data_fechamento").mask("00/00/0000");
+      $("#registro_investimento_data_inicial").mask("00/00/0000");
+      $("#projeto_data_fechamento").mask("00/00/0000");
+  });
+</script>

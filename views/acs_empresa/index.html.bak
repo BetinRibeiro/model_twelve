@@ -1,0 +1,188 @@
+{{extend 'layout.html'}}
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+      <div class="row text-center">
+        <div class="mx-auto col-md-8">
+            <h2 class="mb-3"><a href="{{=URL('alterar')}}">{{=empresa.nome}}</a></h2>
+          <p class="lead">{{=auth.user.first_name+" "+auth.user.last_name}}</p>
+        </div>
+      </div>
+      <div class="row py-3">
+        <div class="col-md-4 py-3">
+          <h3 class="" >Fluxo de Caixa</h3>
+          <ul class="list-group">
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+                <a href="{{=URL('acs_fluxo_caixa','index')}}">Acessar o Fluxo de Caixa</a>
+                <span class="badge badge-secondary badge-pill">{{=empresa.quantidade_ultimos_registros}} Registros</span>
+              </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+                Entradas Mensais
+                <span class="badge badge-success badge-pill"><b>
+                    R$  {{="{:,.2f}".format(round(empresa.valor_ultimas_entradas,2)).replace(",","#").replace(".",",").replace("#",".")}}
+                    </b>
+                </span>
+              </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+                Saidas Mensais
+                <span class="badge badge-danger badge-pill">
+                    R$  {{="{:,.2f}".format(round(empresa.valor_ultimas_saidas,2)).replace(",","#").replace(".",",").replace("#",".")}}
+                </span>
+              </li>
+          </ul>
+        </div>
+        <div class="col-md-4 py-3">
+          <h3 class="">Prospecção</h3>
+          <ul class="list-group">
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+                <a href="{{=URL('acs_prospeccao','index')}}">Acessar Lista Prospecção</a>
+                <span class="badge badge-secondary badge-pill">
+                    {{=empresa.quantidade_ultimos_prospectos}} Registros
+                </span>
+              </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+                Contactados
+                <span class="badge badge-warning badge-pill">
+                    {{=empresa.quantidade_ultimos_contactados}} Total
+                </span>
+              </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+                Fechados
+                <span class="badge badge-success badge-pill">
+                    {{=empresa.quantidade_ultimos_fachamentos}} Total
+                </span>
+              </li>
+          </ul>
+        </div>
+        <div class="col-md-4 py-3">
+          <h3 class="">Clientes</h3>
+          <ul class="list-group">
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+                <a href="{{=URL('acs_cliente','index')}}">Acessar Lista Clientes</a>
+                <span class="badge badge-secondary badge-pill">
+                    {{=empresa.quantidade_clientes}} Registros
+                </span>
+              </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+                Clientes com assinatura
+                <span class="badge badge-warning badge-pill">
+                    {{=empresa.quantidade_assinantes}} Total
+                </span>
+              </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+                Compra de Produtos
+                <span class="badge badge-success badge-pill">
+                    R$ {{="{:,.2f}".format(round(empresa.valor_assinaturas,2)).replace(",","#").replace(".",",").replace("#",".")}}
+                </span>
+              </li>
+          </ul>
+        </div>
+      </div>
+      <div class="row py-3">
+        <div class="col-md-4 py-3">
+          <h3 class="">Projetos</h3>
+          <ul class="list-group">
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+                <a href="{{=URL('acs_projeto','index')}}">Acessar Lista Projeto</a>
+                <span class="badge badge-secondary badge-pill">
+                    {{=empresa.quantidade_projetos}} Registro
+                </span>
+              </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+                Projetos mensais
+                <span class="badge badge-success badge-pill">
+                    {{=empresa.quantidade_projetos_mensal}} Total
+                </span>
+              </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+                Projetos Fixos
+                <span class="badge badge-danger badge-pill">
+                    {{=empresa.quantidade_projetos_fixos}} Total
+                </span>
+              </li>
+          </ul>
+        </div>
+        <div class="col-md-4 py-3">
+          <h3 class="">Trabalho</h3>
+          <ul class="list-group">
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+                <a href="{{=URL('acs_producao','index')}}">Acessar Lista Produção</a>
+                {{if empresa.total_horas_trabalhadas>0:}}
+                {{empresa.total_horas_trabalhadas=empresa.total_horas_trabalhadas/60}}
+                {{pass}}
+                <span class="badge badge-secondary badge-pill">
+                    {{=empresa.quantidade_registros_producao}} Registros
+                </span>
+              </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+                Quant Horas
+                <span class="badge badge-primary badge-pill">
+                    {{=empresa.total_horas_trabalhadas}} Hrs
+                </span> </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+                Valor Total
+                <span class="badge badge-success badge-pill">
+                    R$ {{="{:,.2f}".format(round(empresa.total_valor_producao,2)).replace(",","#").replace(".",",").replace("#",".")}}
+                </span>
+              </li>
+          </ul>
+        </div>
+          {{lucro = empresa.total_capital_rentabilizado-empresa.total_capital_empregado}}
+        <div class="col-md-4 py-3">
+          <h3 class="">Investimentos</h3>
+          <ul class="list-group">
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+                <a href="{{=URL('acs_investimento','index')}}">Acessar Lista Investimento</a>
+                <span class="badge badge-secondary badge-pill">
+                    <b>{{=empresa.quantidade_investimentos}} - R$ {{="{:,.2f}".format(round(lucro,2)).replace(",","#").replace(".",",").replace("#",".")}}</b>
+                </span>
+              </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+                Capital Empregado
+                <span class="badge badge-success badge-pill">
+                    R$ {{="{:,.2f}".format(round(empresa.total_capital_empregado,2)).replace(",","#").replace(".",",").replace("#",".")}}
+                </span> </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+                Capital Rentabilizado
+                <span class="badge badge-primary badge-pill">
+                    R$ {{="{:,.2f}".format(round(empresa.total_capital_rentabilizado,2)).replace(",","#").replace(".",",").replace("#",".")}}
+                </span> </li>
+          </ul>
+        </div>
+      </div>
+ <div class="row py-3">
+        <div class="col-md-4 py-3">
+          <h3 class="" >Recursos Humanos</h3>
+          <ul class="list-group">
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+                <a href="{{=URL('acs_funcionario','index')}}">Acessar Lista Funcionarios</a>
+                <span class="badge badge-primary badge-pill">14</span> </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+                Dapibus ac facilisis in
+                <span class="badge badge-primary badge-pill">2</span> </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+                Morbi leo risus
+                <span class="badge badge-primary badge-pill">1</span> </li>
+          </ul>
+        </div>
+        <div class="col-md-4 py-3">
+          <h3 class="">Prospecção</h3>
+          <ul class="list-group">
+            <li class="list-group-item d-flex justify-content-between align-items-center"> Cras justo odio <span class="badge badge-primary badge-pill">14</span> </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center"> Dapibus ac facilisis in <span class="badge badge-primary badge-pill">2</span> </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center"> Morbi leo risus <span class="badge badge-primary badge-pill">1</span> </li>
+          </ul>
+        </div>
+        <div class="col-md-4 py-3">
+          <h3 class="">Crescimento</h3>
+           <ul class="list-group">
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+                <a href="{{=URL('acs_grafico','index')}}">Acessar Crescimento</a>
+                <span class="badge badge-primary badge-pill">14</span> </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+                Dapibus ac facilisis in
+                <span class="badge badge-primary badge-pill">2</span> </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+                Morbi leo risus
+                <span class="badge badge-primary badge-pill">1</span> </li>
+          </ul>
+        </div>
+      </div>

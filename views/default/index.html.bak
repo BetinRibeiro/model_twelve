@@ -1,0 +1,89 @@
+{{extend 'layout.html'}}
+{{block header}}
+<div class="py-5" >
+    <div class="container">
+      <div class="row">
+        <div class="px-md-5 p-3 col-md-6 d-flex flex-column align-items-start justify-content-center">
+          <h3>Desenvolvimento de Sistemas</h3>
+          <p class="mb-3 lead">Deseja organizar seus dados, identificar padrões, organizar o trabalho de maneira simples e desentralizada, com varios acessos simultaneos?</p>
+          <p class="mb-2">Temos uma solução pra você!</p>
+          <div class="row">
+            <div class="col-md-12"> <i class="fa fa-3x mr-3 d-inline fa-android text-success"></i> <i class="fa fa-3x mx-3 d-inline fa-windows text-info"></i> <i class="fa fa-3x mx-3 d-inline fa-linux text-dark"></i> <i class="fa fa-3x ml-3 d-inline fa-apple text-light"></i> </div>
+          </div>
+        </div>
+        <div class="col-md-6"> <img class="img-fluid d-block" src="https://uploaddeimagens.com.br/images/003/288/842/original/1.jpg"> </div>
+      </div>
+    </div>
+  </div>
+{{end}}
+
+  <div class="py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h3 class="text-center mb-4">Conheça mais sobre nós...</h3>
+          <div class="row">
+            <div class="col-lg-5 col-md-6 p-md-4 col-12"> <img class="img-fluid d-block" src="https://uploaddeimagens.com.br/images/003/288/843/original/2.jpg" width="1500"> </div>
+            <div class="col-md-6 offset-lg-1 d-flex flex-column justify-content-center py-4">
+              <h4 class="my-3">Relacionamento</h4>
+              <p class="lead">Conheça um dos nossos consultores e passe sus ideia, gostamos de conhecer negocios diferêntes e com grande potencial de crescimento, idependente do tamanho do seu negocio atualmente.</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6 d-flex flex-column justify-content-center order-2 order-md-1 py-4">
+              <h4 class="my-3"> <b>Acertividade</b> </h4>
+              <p class="lead">Simplicidade, agilidade, confiabilidade e segurança, é a forma em que trabalhamos, nosso compromisso com os clientes é transformado em segurança em fazer negocios conosco e a confiança depositada em cada um dos clientes nos faz ter o maximo de compromisso com cada um.</p>
+            </div>
+            <div class="col-lg-5 col-md-6 p-md-4 col-12 offset-lg-1 order-1 order-md-2"> <img class="img-fluid d-block" src="https://uploaddeimagens.com.br/images/003/288/845/original/3.jpg" width="1500"> </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-5 col-md-6 p-md-4 col-12"> <img class="img-fluid d-block" src="https://uploaddeimagens.com.br/images/003/288/846/original/4.jpg" width="1500"> </div>
+            <div class="col-md-6 offset-lg-1 d-flex flex-column justify-content-center py-4">
+              <h4 class="my-3"> <b>Visão</b> </h4>
+              <p class="lead">Em um mundo cada vez mais competitivo, empreender ou gerenciar qualquer tipo de negocio sem um sistema como ferramente de apoio e acompanhamento torna-se a mesma coisa de ir para uma guerra sem arma ou armadura.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="py-5 text-center">
+    <div class="container">
+      <div class="row">
+        <div class="mx-auto col-md-8">
+          <h1>Nossa missão</h1>
+          <p class="mb-4"> Mais que simplesmente clientes são parceiros, pois trocamos conheciementos, criamos processos e conseguimos avançar junto, o relacionamento com cada cliente é o nosso foco principal, pois todos temos um grande negocio na mão só que nem sempre conseguimos identificar quais os pontos corretos para conseguir levar o negocio pra outro nivel.</p>
+          <div class="row text-muted">
+            <div class="col-md-2 col-4 p-2"> <i class="d-block fa fa-3x fa-amazon text-warning"></i> </div>
+            <div class="col-md-2 col-4 p-2"> <i class="d-block fa fa-3x fa-chrome text-warning"></i> </div>
+            <div class="col-md-2 col-4 p-2"> <i class="d-block fa fa-3x fa-share-alt text-warning"></i> </div>
+            <div class="col-md-2 col-4 p-2"> <i class="d-block fa fa-3x fa-themeisle text-warning"></i> </div>
+            <div class="col-md-2 col-4 p-2"> <i class="d-block fa fa-3x fa-safari text-warning"></i> </div>
+            <div class="col-md-2 col-4 p-2"> <i class="d-block fa fa-3x fa-joomla text-warning"></i> </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="py-5" style="background-image: url(https://cdn.pixabay.com/photo/2021/05/19/14/31/dandelion-6266230_960_720.jpg); background-position: right bottom;  background-size: cover; background-repeat: repeat; background-attachment: fixed;">
+    <div class="container">
+      <div class="row">
+        <div class="p-3 col-md-12 mr-auto bg-white text-dark">
+          <div class="blockquote mb-0">
+            <p>"Precisava gerenciar varios projetos simultaniamente e tinha uma dificuldade imensa nisso, até que contratamos o serviço da Arsenal System e a organização e padronização do trabalho melhorou drasticamente, hoje eu sei quanto ganho e em que posso ou não economizar, para investir corretamente no meu negocio."</p>
+            <div class="blockquote-footer"> <b>F. B. Alencar</b>, Proprietário at F. B. Alencar LTDA.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="py-5 text-center">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 mx-auto">
+          <p class="mb-3">"Uma pessoa é do tamanho do seu sonho, diga-me seus sonhos e o quanto está disposto a avançar que eu lhe digo o tamanho que você é."</p>
+          <a class="btn btn-success" href="#">Entra em Contato</a>
+        </div>
+      </div>
+    </div>
+  </div>

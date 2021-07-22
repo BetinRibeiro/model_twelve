@@ -1,0 +1,867 @@
+(dp1
+S'output'
+p2
+S"<type 'exceptions.NameError'> name 'meses' is not defined"
+p3
+sS'layer'
+p4
+S'/home/ArsenalSystem/web2py/applications/model_twelve/views/acs_investimento/index.html'
+p5
+sS'code'
+p6
+S'response.write(\'<!DOCTYPE html>\\n<!--[if (gt IE 9)|!(IE)]><!--> <html class="no-js" lang="\', escape=False)\nresponse.write(T.accepted_language or \'en\')\nresponse.write(\'"> <!--<![endif]-->\\n  <head>\\n    <meta charset="utf-8">\\n    <!-- www.phpied.com/conditional-comments-block-downloads/ -->\\n    <!-- Always force latest IE rendering engine\\n         (even in intranet) & Chrome Frame\\n         Remove this if you use the .htaccess -->\\n    <meta http-equiv="X-UA-Compatible" content="IE=edge\', escape=False)\nresponse.write(not request.is_local and \',chrome=1\' or \'\')\nresponse.write(\'">\\n    <!--  Mobile Viewport Fix\\n          j.mp/mobileviewport & davidbcalhoun.com/2010/viewport-metatag\\n          device-width: Occupy full width of the screen in its current orientation\\n          initial-scale = 1.0 retains dimensions instead of zooming out if page height > device height\\n          user-scalable = yes allows the user to zoom in -->\\n    <meta name="viewport" content="width=device-width, initial-scale=1.0">\\n    <title>\', escape=False)\nresponse.write(response.title or request.application)\nresponse.write(\'</title>\\n    <!-- http://dev.w3.org/html5/markup/meta.name.html -->\\n    <meta name="application-name" content="\', escape=False)\nresponse.write(request.application)\nresponse.write(\'">\\n    <!-- Speaking of Google, don\\\'t forget to set your site up:\\n         http://google.com/webmasters -->\\n    <meta name="google-site-verification" content="">\\n    <!-- include stylesheets -->\\n    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>\\n      <link rel="stylesheet" href="https://bootswatch.com/4/yeti/bootstrap.css">\\n<!--     <link rel="stylesheet" href="\', escape=False)\nresponse.write(URL(\'static\',\'css/bootstrap.min.css\'))\nresponse.write(\'"/> -->\\n    <link rel="stylesheet" href="\', escape=False)\nresponse.write(URL(\'static\',\'css/web2py-bootstrap4.css\'))\nresponse.write(\'"/>\\n    <link rel="shortcut icon" href="\', escape=False)\nresponse.write(URL(\'static\',\'images/ico.ico\'))\nresponse.write(\'" type="image/x-icon">\\n    <link rel="apple-touch-icon" href="\', escape=False)\nresponse.write(URL(\'static\',\'images/ico.png\'))\nresponse.write(\'">\\n    <!-- All JavaScript at the bottom, except for Modernizr which enables\\n         HTML5 elements & feature detects -->\\n    <script src="\', escape=False)\nresponse.write(URL(\'static\',\'js/modernizr-2.8.3.min.js\'))\nresponse.write(\'"></script>\\n    <script src="\', escape=False)\nresponse.write(URL(\'static\',\'js/jquery.mask.js\'))\nresponse.write(\'"></script>\\n    <!-- Favicons -->\\n    \', escape=False)\nresponse.write(\'<script type="text/javascript"><!--\\n    // These variables are used by the web2py_ajax_init function in web2py_ajax.js (which is loaded below).\\n    \', escape=False)\nresponse.write(ASSIGNJS(\nw2p_ajax_confirm_message = T(\'Are you sure you want to delete this object?\'),\nw2p_ajax_disable_with_message = T(\'Working...\'),\nw2p_ajax_date_format = T(\'%Y-%m-%d\'),\nw2p_ajax_datetime_format = T(\'%Y-%m-%d %H:%M:%S\'),\najax_error_500 = T.M(\'An error occured, please [[reload %s]] the page\') % URL(args=request.args, vars=request.get_vars)\n))\nresponse.write(\'\\n    //--></script>\\n\', escape=False)\nresponse.files.insert(0,URL(\'static\',\'js/jquery.js\'))\nresponse.files.insert(1,URL(\'static\',\'css/calendar.css\'))\nresponse.files.insert(2,URL(\'static\',\'js/calendar.js\'))\nresponse.files.insert(3,URL(\'static\',\'js/jquery.mask.js\'))\nresponse.include_meta()\nresponse.include_files()\nresponse.write(\'\\n\', escape=False)\nresponse.write(\' <!-- this includes jquery.js, calendar.js/.css and web2py.js -->\\n    \', escape=False)\nresponse.write(\'\\n  </head>\\n  <body>\\n    <div class="w2p_flash alert alert-dismissable">\', escape=False)\nresponse.write(response.flash or \'\')\nresponse.write(\'</div>\\n    <!-- Navbar ======================================= -->\\n    <nav class="navbar navbar-light navbar-expand-md bg-faded bg-dark navbar-dark justify-content-center">\\n       <a href="#" class="navbar-brand d-flex w-50 mr-auto">Arsenal System</a>\\n       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">\\n         <span class="navbar-toggler-icon"></span>\\n       </button>\\n       <div class="navbar-collapse collapse w-100" id="navbarNavDropdown">\\n         <ul class="navbar-nav w-100 justify-content-center">\\n          \', escape=False)\nfor _item in response.menu or []:\n    response.write(\'\\n          \', escape=False)\n    if not len(_item)>4 or not _item[3]:\n        response.write(\'\\n          <li class="nav-item \', escape=False)\n        if _item[1]:\n            response.write(\'active\', escape=False)\n            pass\n        response.write(\'">\\n            <a class="nav-link" href="\', escape=False)\n        response.write(_item[2])\n        response.write(\'">\', escape=False)\n        response.write(_item[0])\n        response.write(\'</a>\\n          </li>\\n          \', escape=False)\n    else:\n        response.write(\'\\n          <li class="nav-item dropdown">\\n            <a class="nav-link dropdown-toggle" href="\', escape=False)\n        response.write(_item[2])\n        response.write(\'" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">\', escape=False)\n        response.write(_item[0])\n        response.write(\'</a>\\n            <div class="dropdown-menu">\\n              \', escape=False)\n        for _subitem in _item[3]:\n            response.write(\'\\n              <a class="dropdown-item" href="\', escape=False)\n            response.write(_subitem[2])\n            response.write(\'">\', escape=False)\n            response.write(_subitem[0])\n            response.write(\'</a>\\n              \', escape=False)\n            pass\n        response.write(\'\\n            </div>\\n          </li>\\n          \', escape=False)\n        pass\n    response.write(\'\\n          \', escape=False)\n    pass\nresponse.write(\'\\n        </ul>\\n<!--          <form class="form-inline my-2 my-lg-0">\\n             <input class="form-control mr-sm-2" type="text" placeholder="Search">\\n         </form> -->\\n        \', escape=False)\nif \'auth\' in globals():\n    response.write(\'\\n        <ul class="nav navbar-nav ml-auto w-100 justify-content-end">\\n          <li class="nav-item dropdown">\\n            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">\\n              \', escape=False)\n    if auth.user:\n        response.write(auth.user.first_name)\n    else:\n        response.write(\'LOGIN\', escape=False)\n        pass\n    response.write(\'\\n            </a>\\n            <div class="dropdown-menu dropdown-menu-right">\\n              \', escape=False)\n    if auth.user:\n        response.write(\'\\n              <a class="dropdown-item" href="\', escape=False)\n        response.write(URL(\'default\',\'user/profile\'))\n        response.write(\'">\', escape=False)\n        response.write(T(\'Profile\'))\n        response.write(\'</a>\\n              \', escape=False)\n        if \'change_password\' not in auth.settings.actions_disabled:\n            response.write(\'\\n              <a class="dropdown-item" href="\', escape=False)\n            response.write(URL(\'default\',\'user/change_password\'))\n            response.write(\'">\', escape=False)\n            response.write(T(\'Change Password\'))\n            response.write(\'</a>\\n              \', escape=False)\n            pass\n        response.write(\'\\n              <a class="dropdown-item" href="\', escape=False)\n        response.write(URL(\'default\',\'user/logout\'))\n        response.write(\'">\', escape=False)\n        response.write(T(\'Logout\'))\n        response.write(\'</a>\\n              \', escape=False)\n    else:\n        response.write(\'\\n              <a class="dropdown-item" href="\', escape=False)\n        response.write(URL(\'default\',\'user/login\'))\n        response.write(\'">\', escape=False)\n        response.write(T(\'Login\'))\n        response.write(\'</a>\\n              \', escape=False)\n        if \'register\' not in auth.settings.actions_disabled:\n            response.write(\'\\n              <a class="dropdown-item" href="\', escape=False)\n            response.write(URL(\'default\',\'user/register\'))\n            response.write(\'">\', escape=False)\n            response.write(T(\'Sign up\'))\n            response.write(\'</a>\\n              \', escape=False)\n            pass\n        response.write(\'\\n              \', escape=False)\n        if \'retrieve_password\' not in auth.settings.actions_disabled:\n            response.write(\'\\n              <a class="dropdown-item" href="\', escape=False)\n            response.write(URL(\'default\',\'user/retrieve_password\'))\n            response.write(\'">\', escape=False)\n            response.write(T(\'Lost Password\'))\n            response.write(\'</a>\\n              \', escape=False)\n            pass\n        response.write(\'\\n              \', escape=False)\n        pass\n    response.write(\'\\n            </div>\\n          </li>\\n        </ul>\\n        \', escape=False)\n    pass\nresponse.write(\'\\n      </div>\\n    </nav>\\n\\n    <!-- Masthead ===================================== -->\\n    \', escape=False)\nresponse.write(\'\\n    \', escape=False)\nresponse.write(\'\\n    <!-- Main ========================================= -->\\n    <!-- Begin page content -->\\n    <div class="container-fluid main-container">\\n      \', escape=False)\nresponse.write(\'\\n\', escape=False)\nimport random\nresponse.write(\'\\n\', escape=False)\nfrom datetime import date\nresponse.write(\'\\n\', escape=False)\nhj = date.today()\nresponse.write(\'\\n\', escape=False)\ntotalinvestido=0\nresponse.write(\'\\n\', escape=False)\ntotalacumulado=0\nresponse.write(\'\\n<div class="row">\\n    <div class="col-md-6 col-12">\\n        <div class="row">\\n            <div class="col-md-6">\\n                <div class="row">\\n                    <div class="col-md-6 col-6">\\n                        <a class="btn btn-outline-primary btn-block my-1" href="\', escape=False)\nresponse.write(URL(\'cadastrar\'))\nresponse.write(\'">\\n                            <i class="fa fa-fw fa-plus"></i>Investimento</a>\\n                    </div>\\n                    <div class="col-md-6 col-6">\\n                        \', escape=False)\nif False:\n    response.write(\'\\n                        <a class="btn btn-outline-primary btn-block my-1" href="\', escape=False)\n    response.write(URL(\'cadastrar\'))\n    response.write(\'">\\n                            <i class="fa fa-fw fa-plus"></i>&nbsp;pessoa</a>\\n                        \', escape=False)\n    pass\nresponse.write(\'\\n                    </div>\\n                </div>\\n                </div>\\n            <div class="col-md-6">\\n                <h5 class="text-left my-2">\', escape=False)\nresponse.write(total)\nresponse.write(\' Investimentos</h5>\\n            </div>\\n        </div>\\n    </div>\\n    <div class="col-md-6 col-12" id="noprint">\\n    \', escape=False)\nif paginas>1:\n    response.write(\'\\n        <div class="form-group row m-2">\\n            <input type="text" class="form-control col-9 col-form-label ml-2" name="busca" placeholder="Pesquisar nome" id="input"/>\\n            <div class="col-2">\\n                <button class="btn btn-primary botao " id="bt" type="button">\\n                    <i class="fa fa-search"></i>\\n                </button>\\n            </div>\\n        </div>\\n        \', escape=False)\n    pass\nresponse.write(\'\\n    </div>\\n</div>\\n\', escape=False)\nif len(rows)>0:\n    response.write(\'\\n<div class="row">\\n    <div class="col-md-6">\\n        <h5 class="text-left my-2">Pagina \', escape=False)\n    response.write(pagina)\n    response.write(\'/\', escape=False)\n    response.write(paginas)\n    response.write(\'</h5>\\n    </div>\\n    <div class="col-md-6" id="noprint">\\n        \', escape=False)\n    if not (consul):\n        response.write(\'\\n        <ul class="pagination m-2  justify-content-end">\\n            \', escape=False)\n        if pagina != 1:\n            response.write(\'\\n            <li class="page-item">\\n                <a class="page-link" href="\', escape=False)\n            response.write(URL(\'index\',args=1))\n            response.write(\'">\\n                    <i class="fa fa-angle-double-left"></i>\\n                </a>\\n            </li>\\n            \', escape=False)\n            pass\n        response.write(\'\\n            \', escape=False)\n        if (paginas-pagina) > -3 and (pagina > 3)  :\n            response.write(\'\\n            <li class="page-item ">\\n                <a class="page-link" href="\', escape=False)\n            response.write(URL(\'index\',args=pagina-3))\n            response.write(\'">\', escape=False)\n            response.write(pagina-3)\n            response.write(\'</a>\\n            </li>\\n            \', escape=False)\n            pass\n        response.write(\'\\n            \', escape=False)\n        if (paginas-pagina) > -2 and (pagina > 2) :\n            response.write(\'\\n            <li class="page-item ">\\n                <a class="page-link" href="\', escape=False)\n            response.write(URL(\'index\',args=pagina-2))\n            response.write(\'">\', escape=False)\n            response.write(pagina-2)\n            response.write(\'</a>\\n            </li>\\n            \', escape=False)\n            pass\n        response.write(\'\\n            \', escape=False)\n        if (paginas-pagina) > -1 and (pagina != 1) :\n            response.write(\'\\n            <li class="page-item ">\\n                <a class="page-link" href="\', escape=False)\n            response.write(URL(\'index\',args=pagina-1))\n            response.write(\'">\', escape=False)\n            response.write(pagina-1)\n            response.write(\'</a> </li>\\n            \', escape=False)\n            pass\n        response.write(\'\\n            \', escape=False)\n        if (paginas) > 1:\n            response.write(\'\\n            <li class="page-item active">\\n                <a class="page-link" href="#">\', escape=False)\n            response.write(pagina)\n            response.write(\'</a> </li>\\n            \', escape=False)\n            pass\n        response.write(\'\\n            \', escape=False)\n        if (paginas-pagina) > 0:\n            response.write(\'\\n            <li class="page-item ">\\n                <a class="page-link" href="\', escape=False)\n            response.write(URL(\'index\',args=pagina+1))\n            response.write(\'">\', escape=False)\n            response.write(pagina+1)\n            response.write(\'</a> </li>\\n            \', escape=False)\n            pass\n        response.write(\'\\n            \', escape=False)\n        if (paginas-pagina) > 1:\n            response.write(\'\\n            <li class="page-item">\\n                <a class="page-link" href="\', escape=False)\n            response.write(URL(\'index\',args=pagina+2))\n            response.write(\'">\', escape=False)\n            response.write(pagina+2)\n            response.write(\'</a> </li>\\n            \', escape=False)\n            pass\n        response.write(\'\\n            \', escape=False)\n        if (paginas-pagina) > 2:\n            response.write(\'\\n            <li class="page-item">\\n                <a class="page-link" href="\', escape=False)\n            response.write(URL(\'index\',args=pagina+3))\n            response.write(\'">\', escape=False)\n            response.write(pagina+3)\n            response.write(\'</a> </li>\\n            \', escape=False)\n            pass\n        response.write(\'\\n            \', escape=False)\n        if pagina != paginas:\n            response.write(\'\\n            <li class="page-item">\\n                <a class="page-link" href="\', escape=False)\n            response.write(URL(\'index\',args=paginas))\n            response.write(\'">\\n                    <i class="fa fa-angle-double-right"></i>\\n                </a>\\n            </li>\\n            \', escape=False)\n            pass\n        response.write(\'\\n        </ul>\\n        \', escape=False)\n        pass\n    response.write(\'\\n    </div>\\n    </div>\\n\\n<div class="row">\\n    <div class="col-md-12">\\n        <div class="table-responsive">\\n            <table class="table table-striped table-borderless">\\n                <thead>\\n                    <tr>\\n                        <th scope="col">C\\xc3\\xb3d</th>\\n                        <th scope="col">Descri\\xc3\\xa7\\xc3\\xa3o</th>\\n                        <th scope="col">Data</th>\\n                        <th scope="col">Vlr Inicial</th>\\n                        <th scope="col">Dias | TMA</th>\\n                        <th scope="col">Acumulado</th>\\n                        <th scope="col">Rendimento</th>\\n                    </tr>\\n                </thead>\\n                <tbody>\\n                    \', escape=False)\n    for row in rows:\n        response.write(\'\\n                    \', escape=False)\n        diferenca = hj - row.data_inicial\n        response.write(\'\\n                    \', escape=False)\n        dias =  diferenca.days\n        response.write(\'\\n                    \', escape=False)\n        if dias>1:\n            response.write(\'\\n                        \', escape=False)\n            meses= dias//30\n            response.write(\'\\n                        \', escape=False)\n            a=1\n            response.write(\'\\n                    \', escape=False)\n            total=row.valor\n            response.write(\'\\n                        \', escape=False)\n            while not a>meses:\n                response.write(\'\\n                            \', escape=False)\n                total+=total*((row.percentual_rendimento/100))\n                response.write(\'\\n                    \', escape=False)\n                a+=1\n                response.write(\'\\n                        \', escape=False)\n                pass\n            response.write(\'\\n                    \', escape=False)\n            pass\n        response.write(\'\\n                    <tr>\\n                        <th scope="row">\\n                            <a class="text-dark" href="\', escape=False)\n        response.write(URL(\'alterar\', args=row.id))\n        response.write(\'">\', escape=False)\n        response.write(row.id+10050)\n        response.write(\'</a>\\n                        </th>\\n                        <td>\\n                            \', escape=False)\n        response.write(row.descricao)\n        response.write(\'\\n                        </td>\\n                        <td>\', escape=False)\n        response.write(row.data_inicial.strftime(\'%d/%m/%Y\'))\n        response.write(\'</td>\\n                        <td>\\n                            R$ \', escape=False)\n        response.write("{:,.2f}".format(round(row.valor,2)).replace(",","#").replace(".",",").replace("#","."))\n        response.write(\'\\n                        </td>\\n                        <td>\', escape=False)\n        response.write(meses)\n        response.write(\' Meses \', escape=False)\n        response.write(row.percentual_rendimento)\n        response.write(\'%</td>\\n                        <td>\\n                            R$ \', escape=False)\n        response.write("{:,.2f}".format(round(total,2)).replace(",","#").replace(".",",").replace("#","."))\n        response.write(\'\\n                        </td>\\n                         \', escape=False)\n        rendimento=total-row.valor\n        response.write(\'\\n                         <td  class="">\\n                            R$ \', escape=False)\n        response.write("{:,.2f}".format(round(rendimento,2)).replace(",","#").replace(".",",").replace("#","."))\n        response.write(\'\\n                        </td>\\n                    </tr>\\n\', escape=False)\n        totalinvestido+=row.valor\n        response.write(\'\\n\', escape=False)\n        totalacumulado+=total\n        response.write(\'\\n                    \', escape=False)\n        pass\n    response.write(\'\\n                    <tr>\\n                        <td></td>\\n                        <td></td>\\n                        <td></td>\\n                         <td  class="">\\n                            R$ \', escape=False)\n    response.write("{:,.2f}".format(round(totalinvestido,2)).replace(",","#").replace(".",",").replace("#","."))\n    response.write(\'\\n                        </td>\\n                        <td></td>\\n                         <td  class="">\\n                            R$ \', escape=False)\n    response.write("{:,.2f}".format(round(totalacumulado,2)).replace(",","#").replace(".",",").replace("#","."))\n    response.write(\'\\n                        </td>\\n                        \', escape=False)\n    diferenca=totalacumulado-totalinvestido\n    response.write(\'\\n                       <td  class="">\\n                            R$ \', escape=False)\n    response.write("{:,.2f}".format(round(diferenca,2)).replace(",","#").replace(".",",").replace("#","."))\n    response.write(\'\\n                        </td>\\n                    </tr>\\n                </tbody>\\n            </table>\\n        </div>\\n    </div>\\n</div>\\n<div class="row p-3">\\n    <div class="col-md-6">\\n        <h5 class="text-left my-2">Pagina \', escape=False)\n    response.write(pagina)\n    response.write(\'/\', escape=False)\n    response.write(paginas)\n    response.write(\'</h5>\\n    </div>\\n    <div class="col-md-6"  id="noprint">\\n        \', escape=False)\n    if not (consul):\n        response.write(\'\\n        <ul class="pagination m-2  justify-content-end">\\n            \', escape=False)\n        if pagina != 1:\n            response.write(\'\\n            <li class="page-item">\\n                <a class="page-link" href="\', escape=False)\n            response.write(URL(\'index\',args=1))\n            response.write(\'">\\n                    <i class="fa fa-angle-double-left"></i>\\n                </a>\\n            </li>\\n            \', escape=False)\n            pass\n        response.write(\'\\n            \', escape=False)\n        if (paginas-pagina) > -3 and (pagina > 3)  :\n            response.write(\'\\n            <li class="page-item ">\\n                <a class="page-link" href="\', escape=False)\n            response.write(URL(\'index\',args=pagina-3))\n            response.write(\'">\', escape=False)\n            response.write(pagina-3)\n            response.write(\'</a>\\n            </li>\\n            \', escape=False)\n            pass\n        response.write(\'\\n            \', escape=False)\n        if (paginas-pagina) > -2 and (pagina > 2) :\n            response.write(\'\\n            <li class="page-item ">\\n                <a class="page-link" href="\', escape=False)\n            response.write(URL(\'index\',args=pagina-2))\n            response.write(\'">\', escape=False)\n            response.write(pagina-2)\n            response.write(\'</a>\\n            </li>\\n            \', escape=False)\n            pass\n        response.write(\'\\n            \', escape=False)\n        if (paginas-pagina) > -1 and (pagina != 1) :\n            response.write(\'\\n            <li class="page-item ">\\n                <a class="page-link" href="\', escape=False)\n            response.write(URL(\'index\',args=pagina-1))\n            response.write(\'">\', escape=False)\n            response.write(pagina-1)\n            response.write(\'</a>\\n            </li>\\n            \', escape=False)\n            pass\n        response.write(\'\\n            \', escape=False)\n        if (paginas) > 1:\n            response.write(\'\\n            <li class="page-item active">\\n                <a class="page-link" href="#">\', escape=False)\n            response.write(pagina)\n            response.write(\'</a>\\n            </li>\\n            \', escape=False)\n            pass\n        response.write(\'\\n            \', escape=False)\n        if (paginas-pagina) > 0:\n            response.write(\'\\n            <li class="page-item ">\\n                <a class="page-link" href="\', escape=False)\n            response.write(URL(\'index\',args=pagina+1))\n            response.write(\'">\', escape=False)\n            response.write(pagina+1)\n            response.write(\'</a>\\n            </li>\\n            \', escape=False)\n            pass\n        response.write(\'\\n            \', escape=False)\n        if (paginas-pagina) > 1:\n            response.write(\'\\n            <li class="page-item">\\n                <a class="page-link" href="\', escape=False)\n            response.write(URL(\'index\',args=pagina+2))\n            response.write(\'">\', escape=False)\n            response.write(pagina+2)\n            response.write(\'</a>\\n            </li>\\n            \', escape=False)\n            pass\n        response.write(\'\\n            \', escape=False)\n        if (paginas-pagina) > 2:\n            response.write(\'\\n            <li class="page-item">\\n                <a class="page-link" href="\', escape=False)\n            response.write(URL(\'index\',args=pagina+3))\n            response.write(\'">\', escape=False)\n            response.write(pagina+3)\n            response.write(\'</a>\\n            </li>\\n            \', escape=False)\n            pass\n        response.write(\'\\n            \', escape=False)\n        if pagina != paginas:\n            response.write(\'\\n            <li class="page-item">\\n                <a class="page-link" href="\', escape=False)\n            response.write(URL(\'index\',args=paginas))\n            response.write(\'">\\n                    <i class="fa fa-angle-double-right"></i>\\n                </a>\\n            </li>\\n            \', escape=False)\n            pass\n        response.write(\'\\n        </ul>\\n        \', escape=False)\n        pass\n    response.write(\'\\n    </div>\\n</div>\\n\', escape=False)\n    pass\nresponse.write(\'\\n\', escape=False)\nif empresa.total_capital_rentabilizado!=totalacumulado:\n    response.write(\'\\n\', escape=False)\n    empresa.total_capital_rentabilizado=totalacumulado\n    response.write(\'\\n\', escape=False)\n    empresa.update_record()\n    response.write(\'\\n\', escape=False)\n    pass\nresponse.write(\'\\n<script>\\n    var inputElement = document.querySelector(\\\'input[name=busca]\\\');\\n    var btnElement = document.querySelector(\\\'button.botao\\\');\\n\\n    btnElement.onclick = function(){\\n     var busca= inputElement.value;\\n        window.location.href = "\', escape=False)\nresponse.write(URL(\'index\'))\nresponse.write(\'"+"/1/"+busca\\n\\n    }\\n    $(document).keypress(function(e) {\\n    if(e.which == 13) {\\n     var busca= inputElement.value;\\n        window.location.href = "\', escape=False)\nresponse.write(URL(\'index\'))\nresponse.write(\'"+"/1/"+busca\\n    }\\n});\\n</script>\\n\', escape=False)\nresponse.write(\'\\n      \', escape=False)\nresponse.write(response.toolbar() if response.show_toolbar else \'\')\nresponse.write(\'\\n    </div>\\n\\n    \', escape=False)\nresponse.write(\' <!-- this is default footer -->\\n    <footer class="footer container-fluid">\\n      <div class="row">\\n        <div class="col-md-12">\\n          <div class="copyright pull-left">\', escape=False)\nresponse.write(T(\'Copyright\'))\nresponse.write(\' &#169; \', escape=False)\nresponse.write(request.now.year)\nresponse.write(\'</div>\\n          <div id="poweredBy" class="pull-right">\\n            Desenvolvimento \\n            <a href="#">Arsenal System</a>\\n          </div>\\n        </div>\\n      </div>\\n    </footer>\\n    \', escape=False)\nresponse.write(\'\\n    <!-- The javascript =============================== -->\\n    <script src="\', escape=False)\nresponse.write(URL(\'static\',\'js/bootstrap.bundle.min.js\'))\nresponse.write(\'"></script>\\n    <script src="\', escape=False)\nresponse.write(URL(\'static\',\'js/web2py-bootstrap4.js\'))\nresponse.write(\'"></script>\\n    \', escape=False)\nresponse.write(\'\\n    \', escape=False)\nif response.google_analytics_id:\n    response.write(\'\\n    <!-- Analytics ==================================== -->\\n    <script src="\', escape=False)\n    response.write(URL(\'static\',\'js/analytics.min.js\'))\n    response.write(\'"></script>\\n    <script type="text/javascript">\\n      analytics.initialize({\\n      \\\'Google Analytics\\\':{trackingId:\\\'\', escape=False)\n    response.write(response.google_analytics_id)\n    response.write("\'}\\n      });\\n    </script>\\n    ", escape=False)\n    pass\nresponse.write(\'\\n  </body>\\n</html>\\n\', escape=False)'
+p7
+sS'snapshot'
+p8
+(dp9
+S'exception'
+p10
+(dp11
+S'__getslice__'
+p12
+S"<method-wrapper '__getslice__' of exceptions.NameError object>"
+p13
+sS'__str__'
+p14
+S"<method-wrapper '__str__' of exceptions.NameError object>"
+p15
+sS'__reduce__'
+p16
+S'<built-in method __reduce__ of exceptions.NameError object>'
+p17
+sS'__dict__'
+p18
+S'{}'
+p19
+sS'message'
+p20
+S'"name \'meses\' is not defined"'
+p21
+sS'__sizeof__'
+p22
+S'<built-in method __sizeof__ of exceptions.NameError object>'
+p23
+sS'__init__'
+p24
+S"<method-wrapper '__init__' of exceptions.NameError object>"
+p25
+sS'__setattr__'
+p26
+S"<method-wrapper '__setattr__' of exceptions.NameError object>"
+p27
+sS'__reduce_ex__'
+p28
+S'<built-in method __reduce_ex__ of exceptions.NameError object>'
+p29
+sS'__new__'
+p30
+S'<built-in method __new__ of type object>'
+p31
+sS'__format__'
+p32
+S'<built-in method __format__ of exceptions.NameError object>'
+p33
+sS'__class__'
+p34
+S"<type 'exceptions.NameError'>"
+p35
+sS'__doc__'
+p36
+S"'Name not found globally.'"
+p37
+sS'__getitem__'
+p38
+S"<method-wrapper '__getitem__' of exceptions.NameError object>"
+p39
+sS'__setstate__'
+p40
+S'<built-in method __setstate__ of exceptions.NameError object>'
+p41
+sS'__getattribute__'
+p42
+S"<method-wrapper '__getattribute__' of exceptions.NameError object>"
+p43
+sS'args'
+p44
+S'("name \'meses\' is not defined",)'
+p45
+sS'__subclasshook__'
+p46
+S'<built-in method __subclasshook__ of type object>'
+p47
+sS'__unicode__'
+p48
+S'<built-in method __unicode__ of exceptions.NameError object>'
+p49
+sS'__delattr__'
+p50
+S"<method-wrapper '__delattr__' of exceptions.NameError object>"
+p51
+sS'__repr__'
+p52
+S"<method-wrapper '__repr__' of exceptions.NameError object>"
+p53
+sS'__hash__'
+p54
+S"<method-wrapper '__hash__' of exceptions.NameError object>"
+p55
+ssS'evalue'
+p56
+S"name 'meses' is not defined"
+p57
+sS'request'
+p58
+cgluon.html
+XML_unpickle
+p59
+(S's\x9dV\x00\x00<div><table><tr><td style="font-weight:bold;vertical-align:top;">ajax</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">application</td><td style="vertical-align:top;">:</td><td><div>model_twelve</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">args</td><td style="vertical-align:top;">:</td><td><div><table></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">cid</td><td style="vertical-align:top;">:</td><td><div>None</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">client</td><td style="vertical-align:top;">:</td><td><div>191.212.144.51</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">controller</td><td style="vertical-align:top;">:</td><td><div>acs_investimento</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">cookies</td><td style="vertical-align:top;">:</td><td><div><table><tr><td style="font-weight:bold;vertical-align:top;">session_id_model_eight</td><td style="vertical-align:top;">:</td><td><div>191.212.144.51-7136b25d-8da4-4af7-9cb4-6561411e9ccf<table><tr><td style="font-weight:bold;vertical-align:top;">comment</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">domain</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">expires</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">httponly</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">max-age</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">path</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">samesite</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">secure</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">version</td><td style="vertical-align:top;">:</td><td><div></div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_id_model_twelve</td><td style="vertical-align:top;">:</td><td><div>191.212.144.51-adaa4b9e-32d2-43e2-b0ad-652f21cfcf51<table><tr><td style="font-weight:bold;vertical-align:top;">comment</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">domain</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">expires</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">httponly</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">max-age</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">path</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">samesite</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">secure</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">version</td><td style="vertical-align:top;">:</td><td><div></div></td></tr></table></div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">env</td><td style="vertical-align:top;">:</td><td><div><table><tr><td style="font-weight:bold;vertical-align:top;">CONTENT_LENGTH</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">CONTENT_TYPE</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">DOCUMENT_ROOT</td><td style="vertical-align:top;">:</td><td><div>/usr/local/openresty/nginx/html</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">HTTPS</td><td style="vertical-align:top;">:</td><td><div>on</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">HTTP_ACCEPT</td><td style="vertical-align:top;">:</td><td><div>text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">HTTP_ACCEPT_ENCODING</td><td style="vertical-align:top;">:</td><td><div>gzip, deflate, br</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">HTTP_ACCEPT_LANGUAGE</td><td style="vertical-align:top;">:</td><td><div>pt-BR,pt;q=0.8,en-US;q=0.5,en;q=0.3</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">HTTP_CONNECTION</td><td style="vertical-align:top;">:</td><td><div>close</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">HTTP_COOKIE</td><td style="vertical-align:top;">:</td><td><div>session_id_model_eight=191.212.144.51-7136b25d-8da4-4af7-9cb4-6561411e9ccf; session_id_model_twelve=191.212.144.51-adaa4b9e-32d2-43e2-b0ad-652f21cfcf51; _ga=GA1.3.597102269.1625635986</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">HTTP_HOST</td><td style="vertical-align:top;">:</td><td><div>arsenalsystem.pythonanywhere.com</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">HTTP_REFERER</td><td style="vertical-align:top;">:</td><td><div>https://arsenalsystem.pythonanywhere.com/model_twelve/acs_investimento/cadastrar</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">HTTP_UPGRADE_INSECURE_REQUESTS</td><td style="vertical-align:top;">:</td><td><div>1</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">HTTP_USER_AGENT</td><td style="vertical-align:top;">:</td><td><div>Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:89.0) Gecko/20100101 Firefox/89.0</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">HTTP_X_FORWARDED_FOR</td><td style="vertical-align:top;">:</td><td><div>191.212.144.51</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">HTTP_X_REAL_IP</td><td style="vertical-align:top;">:</td><td><div>191.212.144.51</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">PATH_INFO</td><td style="vertical-align:top;">:</td><td><div>/model_twelve/acs_investimento/index</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">QUERY_STRING</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">REMOTE_ADDR</td><td style="vertical-align:top;">:</td><td><div>10.0.0.224</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">REMOTE_PORT</td><td style="vertical-align:top;">:</td><td><div>60194</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">REQUEST_METHOD</td><td style="vertical-align:top;">:</td><td><div>GET</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">REQUEST_URI</td><td style="vertical-align:top;">:</td><td><div>/model_twelve/acs_investimento/index</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">SCRIPT_NAME</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">SERVER_NAME</td><td style="vertical-align:top;">:</td><td><div>arsenalsystem.pythonanywhere.com</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">SERVER_PORT</td><td style="vertical-align:top;">:</td><td><div>443</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">SERVER_PROTOCOL</td><td style="vertical-align:top;">:</td><td><div>HTTP/1.1</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">app_folders</td><td style="vertical-align:top;">:</td><td><div>set([&#x27;/home/ArsenalSystem/web2py/applications/model_thirteen&#x27;, &#x27;/home/ArsenalSystem/web2py/applications/model_tree&#x27;, &#x27;/home/ArsenalSystem/web2py/applications/model_twelve&#x27;, &#x27;/home/ArsenalSystem/web2py/applications/model_two&#x27;, &#x27;/home/ArsenalSystem/web2py/applications/model_four&#x27;])</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">applications_parent</td><td style="vertical-align:top;">:</td><td><div>/home/ArsenalSystem/web2py</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">content_length</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">content_type</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">db_sessions</td><td style="vertical-align:top;">:</td><td><div>set([])</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">debugging</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">document_root</td><td style="vertical-align:top;">:</td><td><div>/usr/local/openresty/nginx/html</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">gluon_parent</td><td style="vertical-align:top;">:</td><td><div>/home/ArsenalSystem/web2py</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">http_accept</td><td style="vertical-align:top;">:</td><td><div>text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">http_accept_encoding</td><td style="vertical-align:top;">:</td><td><div>gzip, deflate, br</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">http_accept_language</td><td style="vertical-align:top;">:</td><td><div>pt-BR,pt;q=0.8,en-US;q=0.5,en;q=0.3</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">http_connection</td><td style="vertical-align:top;">:</td><td><div>close</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">http_cookie</td><td style="vertical-align:top;">:</td><td><div>session_id_model_eight=191.212.144.51-7136b25d-8da4-4af7-9cb4-6561411e9ccf; session_id_model_twelve=191.212.144.51-adaa4b9e-32d2-43e2-b0ad-652f21cfcf51; _ga=GA1.3.597102269.1625635986</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">http_host</td><td style="vertical-align:top;">:</td><td><div>arsenalsystem.pythonanywhere.com</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">http_referer</td><td style="vertical-align:top;">:</td><td><div>https://arsenalsystem.pythonanywhere.com/model_twelve/acs_investimento/cadastrar</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">http_upgrade_insecure_requests</td><td style="vertical-align:top;">:</td><td><div>1</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">http_user_agent</td><td style="vertical-align:top;">:</td><td><div>Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:89.0) Gecko/20100101 Firefox/89.0</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">http_x_forwarded_for</td><td style="vertical-align:top;">:</td><td><div>191.212.144.51</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">http_x_real_ip</td><td style="vertical-align:top;">:</td><td><div>191.212.144.51</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">https</td><td style="vertical-align:top;">:</td><td><div>on</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">is_jython</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">is_py2</td><td style="vertical-align:top;">:</td><td><div>True</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">is_pypy</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">is_source</td><td style="vertical-align:top;">:</td><td><div>True</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">local_hosts</td><td style="vertical-align:top;">:</td><td><div><table><tr><td><div>blue-liveweb13</div></td></tr><tr><td><div>35.173.69.207</div></td></tr><tr><td><div>::ffff:127.0.0.1</div></td></tr><tr><td><div>::1</div></td></tr><tr><td><div>arsenalsystem.pythonanywhere.com</div></td></tr><tr><td><div>localhost</div></td></tr><tr><td><div>127.0.0.1</div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">path_info</td><td style="vertical-align:top;">:</td><td><div>/model_twelve/acs_investimento/index</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">query_string</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">remote_addr</td><td style="vertical-align:top;">:</td><td><div>10.0.0.224</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">remote_port</td><td style="vertical-align:top;">:</td><td><div>60194</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">request_method</td><td style="vertical-align:top;">:</td><td><div>GET</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">request_uri</td><td style="vertical-align:top;">:</td><td><div>/model_twelve/acs_investimento/index</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">script_name</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">server_name</td><td style="vertical-align:top;">:</td><td><div>arsenalsystem.pythonanywhere.com</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">server_port</td><td style="vertical-align:top;">:</td><td><div>443</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">server_protocol</td><td style="vertical-align:top;">:</td><td><div>HTTP/1.1</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">uwsgi.node</td><td style="vertical-align:top;">:</td><td><div>blue-liveweb13</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">uwsgi.version</td><td style="vertical-align:top;">:</td><td><div>2.0.17.1</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">uwsgi_node</td><td style="vertical-align:top;">:</td><td><div>blue-liveweb13</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">uwsgi_version</td><td style="vertical-align:top;">:</td><td><div>2.0.17.1</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">web2py_path</td><td style="vertical-align:top;">:</td><td><div>/home/ArsenalSystem/web2py</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">web2py_version</td><td style="vertical-align:top;">:</td><td><div>2.18.5-stable+timestamp.2019.04.08.04.22.03</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi.errors</td><td style="vertical-align:top;">:</td><td><div>&lt;uwsgi_file__bin_user_wsgi_wrapper.ErrorLogFile object at 0x7f3bb7b62990&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi.file_wrapper</td><td style="vertical-align:top;">:</td><td><div>&lt;built-in function uwsgi_sendfile&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi.input</td><td style="vertical-align:top;">:</td><td><div>&lt;uwsgi._Input object at 0x7f3bb8e95d50&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi.multiprocess</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi.multithread</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi.run_once</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi.url_scheme</td><td style="vertical-align:top;">:</td><td><div>https</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi.version</td><td style="vertical-align:top;">:</td><td><div><table><tr><td><div>1</div></td></tr><tr><td><div>0</div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi_errors</td><td style="vertical-align:top;">:</td><td><div>&lt;uwsgi_file__bin_user_wsgi_wrapper.ErrorLogFile object at 0x7f3bb7b62990&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi_file_wrapper</td><td style="vertical-align:top;">:</td><td><div>&lt;built-in function uwsgi_sendfile&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi_input</td><td style="vertical-align:top;">:</td><td><div>&lt;uwsgi._Input object at 0x7f3bb8e95d50&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi_multiprocess</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi_multithread</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi_run_once</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi_url_scheme</td><td style="vertical-align:top;">:</td><td><div>https</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi_version</td><td style="vertical-align:top;">:</td><td><div><table><tr><td><div>1</div></td></tr><tr><td><div>0</div></td></tr></table></div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">extension</td><td style="vertical-align:top;">:</td><td><div>html</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">folder</td><td style="vertical-align:top;">:</td><td><div>/home/ArsenalSystem/web2py/applications/model_twelve</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">function</td><td style="vertical-align:top;">:</td><td><div>index</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">global_settings</td><td style="vertical-align:top;">:</td><td><div><table><tr><td style="font-weight:bold;vertical-align:top;">app_folders</td><td style="vertical-align:top;">:</td><td><div>set([&#x27;/home/ArsenalSystem/web2py/applications/model_thirteen&#x27;, &#x27;/home/ArsenalSystem/web2py/applications/model_tree&#x27;, &#x27;/home/ArsenalSystem/web2py/applications/model_twelve&#x27;, &#x27;/home/ArsenalSystem/web2py/applications/model_two&#x27;, &#x27;/home/ArsenalSystem/web2py/applications/model_four&#x27;])</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">applications_parent</td><td style="vertical-align:top;">:</td><td><div>/home/ArsenalSystem/web2py</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">db_sessions</td><td style="vertical-align:top;">:</td><td><div>set([])</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">debugging</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">gluon_parent</td><td style="vertical-align:top;">:</td><td><div>/home/ArsenalSystem/web2py</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">is_jython</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">is_py2</td><td style="vertical-align:top;">:</td><td><div>True</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">is_pypy</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">is_source</td><td style="vertical-align:top;">:</td><td><div>True</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">local_hosts</td><td style="vertical-align:top;">:</td><td><div><table><tr><td><div>blue-liveweb13</div></td></tr><tr><td><div>35.173.69.207</div></td></tr><tr><td><div>::ffff:127.0.0.1</div></td></tr><tr><td><div>::1</div></td></tr><tr><td><div>arsenalsystem.pythonanywhere.com</div></td></tr><tr><td><div>localhost</div></td></tr><tr><td><div>127.0.0.1</div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">web2py_version</td><td style="vertical-align:top;">:</td><td><div>2.18.5-stable+timestamp.2019.04.08.04.22.03</div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">is_https</td><td style="vertical-align:top;">:</td><td><div>True</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">is_local</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">is_restful</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">is_scheduler</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">is_shell</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">method</td><td style="vertical-align:top;">:</td><td><div>GET</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">now</td><td style="vertical-align:top;">:</td><td><div>datetime.datetime(2021, 7, 9, 18, 40, 57, 826732)</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">raw_args</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">raw_extension</td><td style="vertical-align:top;">:</td><td><div>None</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">url</td><td style="vertical-align:top;">:</td><td><div>/model_twelve/acs_investimento/index</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">utcnow</td><td style="vertical-align:top;">:</td><td><div>datetime.datetime(2021, 7, 9, 18, 40, 57, 826743)</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi</td><td style="vertical-align:top;">:</td><td><div>&lt;gluon.main.LazyWSGI object at 0x7f3bb6e54e90&gt;</div></td></tr></table></div>'
+tRp60
+sS'frames'
+p61
+(lp62
+(dp63
+S'file'
+p64
+S'/home/ArsenalSystem/web2py/gluon/restricted.py'
+p65
+sS'dump'
+p66
+(dp67
+S'environment'
+p68
+S"{'A': <class 'gluon.html.A'>, 'ANY_OF': <class 'pydal.validators.ANY_OF'>, 'ASSIGNJS': <function ASSIGNJS>, 'AppConfig': <function AppConfig>, 'Auth': <class 'gluon.tools.Auth'>, 'B': <class 'gluon.html.B'>, 'BEAUTIFY': <class 'gluon.html.BEAUTIFY'>, 'BODY': <class 'gluon.html.BODY'>, 'BR': <class 'gluon.html.BR'>, 'BUTTON': <class 'gluon.html.BUTTON'>, ...}"
+p69
+sS'ccode'
+p70
+S'<code object <module> at 0x7f3bb7142b30, file "/...welve/views/acs_investimento/index.html", line 1>'
+p71
+ssS'lnum'
+p72
+I219
+sS'lines'
+p73
+(dp74
+I214
+S'    if environment is None:'
+p75
+sI215
+S'        environment = {}'
+p76
+sI216
+S"    environment['__file__'] = layer"
+p77
+sI217
+S"    environment['__name__'] = '__restricted__'"
+p78
+sI218
+S'    try:'
+p79
+sI219
+S'        exec(ccode, environment)'
+p80
+sI220
+S'    except HTTP:'
+p81
+sI221
+S'        raise'
+p82
+sI222
+S'    except RestrictedError:'
+p83
+sI223
+S'        # do not encapsulate (obfuscate) the original RestrictedError'
+p84
+ssS'call'
+p85
+S'(ccode=<code object <module> at 0x7f3bb7142b30, file "/...welve/views/acs_investimento/index.html", line 1>, environment={\'A\': <class \'gluon.html.A\'>, \'ANY_OF\': <class \'pydal.validators.ANY_OF\'>, \'ASSIGNJS\': <function ASSIGNJS>, \'AppConfig\': <function AppConfig>, \'Auth\': <class \'gluon.tools.Auth\'>, \'B\': <class \'gluon.html.B\'>, \'BEAUTIFY\': <class \'gluon.html.BEAUTIFY\'>, \'BODY\': <class \'gluon.html.BODY\'>, \'BR\': <class \'gluon.html.BR\'>, \'BUTTON\': <class \'gluon.html.BUTTON\'>, ...}, layer=\'/home/ArsenalSystem/web2py/applications/model_twelve/views/acs_investimento/index.html\', scode=r"response.write(\'<!DOCTYPE html>\\n<!--[if (gt IE ...nse.write(\'\\n  </body>\\n</html>\\n\', escape=False)")'
+p86
+sS'func'
+p87
+S'restricted'
+p88
+sa(dp89
+g64
+S'/home/ArsenalSystem/web2py/applications/model_twelve/views/acs_investimento/index.html'
+p90
+sg66
+(dp91
+sg72
+I261
+sg73
+(dp92
+I256
+S"        response.write('\\n                        </td>\\n                        <td>', escape=False)"
+p93
+sI257
+S"        response.write(row.data_inicial.strftime('%d/%m/%Y'))"
+p94
+sI258
+S"        response.write('</td>\\n                        <td>\\n                            R$ ', escape=False)"
+p95
+sI259
+S'        response.write("{:,.2f}".format(round(row.valor,2)).replace(",","#").replace(".",",").replace("#","."))'
+p96
+sI260
+S"        response.write('\\n                        </td>\\n                        <td>', escape=False)"
+p97
+sI261
+S'        response.write(meses)'
+p98
+sI262
+S"        response.write(' Meses ', escape=False)"
+p99
+sI263
+S'        response.write(row.percentual_rendimento)'
+p100
+sI264
+S"        response.write('%</td>\\n                        <td>\\n                            R$ ', escape=False)"
+p101
+sI265
+S'        response.write("{:,.2f}".format(round(total,2)).replace(",","#").replace(".",",").replace("#","."))'
+p102
+sI266
+S"        response.write('\\n                        </td>\\n                         ', escape=False)"
+p103
+sI267
+S'        rendimento=total-row.valor'
+p104
+sI268
+S'        response.write(\'\\n                         <td  class="">\\n                            R$ \', escape=False)'
+p105
+sI269
+S'        response.write("{:,.2f}".format(round(rendimento,2)).replace(",","#").replace(".",",").replace("#","."))'
+p106
+sI270
+S"        response.write('\\n                        </td>\\n                    </tr>\\n', escape=False)"
+p107
+sI271
+S'        totalinvestido+=row.valor'
+p108
+sI252
+S'        response.write(\'">\', escape=False)'
+p109
+sI253
+S'        response.write(row.id+10050)'
+p110
+sI254
+S"        response.write('</a>\\n                        </th>\\n                        <td>\\n                            ', escape=False)"
+p111
+sI255
+S'        response.write(row.descricao)'
+p112
+ssg85
+S'()'
+p113
+sg87
+S'<module>'
+p114
+sasS'pyver'
+p115
+S'Python 2.7.12: /usr/local/bin/uwsgi (prefix: /usr)'
+p116
+sS'session'
+p117
+g59
+(S's\xee\x08\x00\x00<div><table><tr><td style="font-weight:bold;vertical-align:top;">auth</td><td style="vertical-align:top;">:</td><td><div><table><tr><td style="font-weight:bold;vertical-align:top;">expiration</td><td style="vertical-align:top;">:</td><td><div>2592000</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">hmac_key</td><td style="vertical-align:top;">:</td><td><div>710f3c5c-33dc-4ff7-a09e-2a9c8f42727e</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">last_visit</td><td style="vertical-align:top;">:</td><td><div>datetime.datetime(2021, 6, 17, 13, 48, 48, 767254)</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">remember_me</td><td style="vertical-align:top;">:</td><td><div>True</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">user</td><td style="vertical-align:top;">:</td><td><div><table><tr><td style="font-weight:bold;vertical-align:top;">email</td><td style="vertical-align:top;">:</td><td><div>betin@gmail.com</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">first_name</td><td style="vertical-align:top;">:</td><td><div>Rogoberto</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">id</td><td style="vertical-align:top;">:</td><td><div>1L</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">last_name</td><td style="vertical-align:top;">:</td><td><div>Ribeiro</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">registration_id</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">registration_key</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">reset_password_key</td><td style="vertical-align:top;">:</td><td><div></div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">user_groups</td><td style="vertical-align:top;">:</td><td><div><table><tr><td style="font-weight:bold;vertical-align:top;">1</td><td style="vertical-align:top;">:</td><td><div>user_1</div></td></tr></table></div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">flash</td><td style="vertical-align:top;">:</td><td><div>None</div></td></tr></table></div>'
+tRp118
+sS'etype'
+p119
+S"<type 'exceptions.NameError'>"
+p120
+sS'date'
+p121
+S'Fri Jul  9 18:40:58 2021'
+p122
+sS'response'
+p123
+g59
+(S's\xbe\x1e\x00\x00<div><table><tr><td style="font-weight:bold;vertical-align:top;">body</td><td style="vertical-align:top;">:</td><td><div>&lt;cStringIO.StringO object at 0x7f3bb6e52730&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">cookies</td><td style="vertical-align:top;">:</td><td><div><table><tr><td style="font-weight:bold;vertical-align:top;">session_id_model_twelve</td><td style="vertical-align:top;">:</td><td><div>191.212.144.51-adaa4b9e-32d2-43e2-b0ad-652f21cfcf51<table><tr><td style="font-weight:bold;vertical-align:top;">comment</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">domain</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">expires</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">httponly</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">max-age</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">path</td><td style="vertical-align:top;">:</td><td><div>/</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">samesite</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">secure</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">version</td><td style="vertical-align:top;">:</td><td><div></div></td></tr></table></div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">delimiters</td><td style="vertical-align:top;">:</td><td><div><table><tr><td><div>{{</div></td></tr><tr><td><div>}}</div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">files</td><td style="vertical-align:top;">:</td><td><div><table><tr><td><div>/model_twelve/static/js/jquery.js</div></td></tr><tr><td><div>/model_twelve/static/css/calendar.css</div></td></tr><tr><td><div>/model_twelve/static/js/calendar.js</div></td></tr><tr><td><div>/model_twelve/static/js/jquery.mask.js</div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">flash</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">form_label_separator</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">formstyle</td><td style="vertical-align:top;">:</td><td><div>bootstrap4_inline</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">generic_patterns</td><td style="vertical-align:top;">:</td><td><div><table></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">google_analytics_id</td><td style="vertical-align:top;">:</td><td><div>None</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">headers</td><td style="vertical-align:top;">:</td><td><div><table><tr><td style="font-weight:bold;vertical-align:top;">X-Powered-By</td><td style="vertical-align:top;">:</td><td><div>web2py</div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">menu</td><td style="vertical-align:top;">:</td><td><div><table><tr><td><div><table><tr><td><div>Principal</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>/model_twelve/default/index</div></td></tr><tr><td><div><table></table></div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Neg\xc3\xb3cio</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>/model_twelve/acs_empresa/index</div></td></tr><tr><td><div><table></table></div></td></tr></table></div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">meta</td><td style="vertical-align:top;">:</td><td><div><table><tr><td style="font-weight:bold;vertical-align:top;">author</td><td style="vertical-align:top;">:</td><td><div>Your Name &lt;you@example.com&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">description</td><td style="vertical-align:top;">:</td><td><div>a cool new app</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">generator</td><td style="vertical-align:top;">:</td><td><div>Web2py Web Framework</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">keywords</td><td style="vertical-align:top;">:</td><td><div><table><tr><td><div>web2py</div></td></tr><tr><td><div>python</div></td></tr><tr><td><div>framework</div></td></tr></table></div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">models_to_run</td><td style="vertical-align:top;">:</td><td><div><table><tr><td><div>^\\w+\\.py$</div></td></tr><tr><td><div>^acs_investimento/\\w+\\.py$</div></td></tr><tr><td><div>^acs_investimento/index/\\w+\\.py$</div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">postprocessing</td><td style="vertical-align:top;">:</td><td><div><table></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_client</td><td style="vertical-align:top;">:</td><td><div>191.212.144.51</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_cookie_compression_level</td><td style="vertical-align:top;">:</td><td><div>None</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_cookie_expires</td><td style="vertical-align:top;">:</td><td><div>2592000</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_data_name</td><td style="vertical-align:top;">:</td><td><div>session_data_model_twelve</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_file</td><td style="vertical-align:top;">:</td><td><div>&lt;open file &#x27;/home/ArsenalSystem/web2py/applications/model_twelve/sessions/016/14e/191.212.144.51-adaa4b9e-32d2-43e2-b0ad-652f21cfcf51&#x27;, mode &#x27;rb+&#x27; at 0x7f3bb73136f0&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_filename</td><td style="vertical-align:top;">:</td><td><div>/home/ArsenalSystem/web2py/applications/model_twelve/sessions/191.212.144.51-adaa4b9e-32d2-43e2-b0ad-652f21cfcf51</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_hash</td><td style="vertical-align:top;">:</td><td><div>08e50565b42ed283f93dd948d5a993a0</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_id</td><td style="vertical-align:top;">:</td><td><div>191.212.144.51-adaa4b9e-32d2-43e2-b0ad-652f21cfcf51</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_id_name</td><td style="vertical-align:top;">:</td><td><div>session_id_model_twelve</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_locked</td><td style="vertical-align:top;">:</td><td><div>True</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_masterapp</td><td style="vertical-align:top;">:</td><td><div>model_twelve</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_new</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_storage_type</td><td style="vertical-align:top;">:</td><td><div>file</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">show_toolbar</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">status</td><td style="vertical-align:top;">:</td><td><div>200</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">view</td><td style="vertical-align:top;">:</td><td><div>acs_investimento/index.html</div></td></tr></table></div>'
+tRp124
+sS'locals'
+p125
+(dp126
+S'PY2'
+p127
+S'True'
+p128
+sS'OBJECT'
+p129
+S"<class 'gluon.html.OBJECT'>"
+p130
+sS'SQLDB'
+p131
+S"<class 'pydal.base.DAL'>"
+p132
+sg117
+S"<Storage {'_formkey[projeto/1]': ['2f2729ab-f69c.../37]': ['4223ec74-d365-4821-bd48-4c26c3a53b13']}>"
+p133
+sS'LINK'
+p134
+S"<class 'gluon.html.LINK'>"
+p135
+sS'BR'
+p136
+S"<class 'gluon.html.BR'>"
+p137
+sS'local_import'
+p138
+S'<function <lambda>>'
+p139
+sS'OPTGROUP'
+p140
+S"<class 'gluon.html.OPTGROUP'>"
+p141
+sS'__package__'
+p142
+S'None'
+p143
+sS'row'
+p144
+S"<Row {'empresa': 1L, 'modified_by': 1L, 'data_fi...9, 18, 40, 56), 'id': 7L, 'descricao': 'BTC - '}>"
+p145
+sS'PRE'
+p146
+S"<class 'gluon.html.PRE'>"
+p147
+sS'IS_INT_IN_RANGE'
+p148
+S"<class 'pydal.validators.IS_INT_IN_RANGE'>"
+p149
+sS'to_bytes'
+p150
+S'<function to_bytes>'
+p151
+sS'IS_LOWER'
+p152
+S"<class 'pydal.validators.IS_LOWER'>"
+p153
+sS'IS_STRONG'
+p154
+S"<class 'pydal.validators.IS_STRONG'>"
+p155
+sS'totalacumulado'
+p156
+S'0'
+sS'cache'
+p157
+S'<gluon.cache.Cache object>'
+p158
+sS'IS_IN_DB'
+p159
+S"<class 'pydal.validators.IS_IN_DB'>"
+p160
+sS'TAG'
+p161
+S'<gluon.html.__TAG__ object>'
+p162
+sS'SQLField'
+p163
+S"<class 'pydal.objects.Field'>"
+p164
+sS'mail'
+p165
+S'<gluon.tools.Mail object>'
+p166
+sS'consul'
+p167
+S'None'
+p168
+sS'BODY'
+p169
+S"<class 'gluon.html.BODY'>"
+p170
+sS'IS_DATE_IN_RANGE'
+p171
+S"<class 'pydal.validators.IS_DATE_IN_RANGE'>"
+p172
+sS'random'
+p173
+S"<module 'random' from '/usr/lib/python2.7/random.pyc'>"
+p174
+sS'IFRAME'
+p175
+S"<class 'gluon.html.IFRAME'>"
+p176
+sS'URL'
+p177
+S'<function URL>'
+p178
+sS'__file__'
+p179
+S"'/home/ArsenalSystem/web2py/applications/model_twelve/views/acs_investimento/index.html'"
+p180
+sS'db'
+p181
+S'<DAL uri="sqlite://storage.sqlite">'
+p182
+sS'auth'
+p183
+S'<gluon.tools.Auth object>'
+p184
+sS'P'
+S"<class 'gluon.html.P'>"
+p185
+sS'TFOOT'
+p186
+S"<class 'gluon.html.TFOOT'>"
+p187
+sS'iteritems'
+p188
+S'<function <lambda>>'
+p189
+sS'XHTML'
+p190
+S"<class 'gluon.html.XHTML'>"
+p191
+sS'ON'
+p192
+g128
+sS'OL'
+p193
+S"<class 'gluon.html.OL'>"
+p194
+sS'TEXTAREA'
+p195
+S"<class 'gluon.html.TEXTAREA'>"
+p196
+sS'MENU'
+p197
+S"<class 'gluon.html.MENU'>"
+p198
+sS'IS_IMAGE'
+p199
+S"<class 'pydal.validators.IS_IMAGE'>"
+p200
+sS'EM'
+p201
+S"<class 'gluon.html.EM'>"
+p202
+sS'CODE'
+p203
+S"<class 'gluon.html.CODE'>"
+p204
+sS'HTTP'
+p205
+S"<class 'gluon.http.HTTP'>"
+p206
+sS'HR'
+p207
+S"<class 'gluon.html.HR'>"
+p208
+sS'IS_DATETIME'
+p209
+S"<class 'pydal.validators.IS_DATETIME'>"
+p210
+sS'reduce'
+p211
+S'<built-in function reduce>'
+p212
+sS'STYLE'
+p213
+S"<class 'gluon.html.STYLE'>"
+p214
+sS'LABEL'
+p215
+S"<class 'gluon.html.LABEL'>"
+p216
+sS'CLEANUP'
+p217
+S"<class 'pydal.validators.CLEANUP'>"
+p218
+sS'SELECT'
+p219
+S"<class 'gluon.html.SELECT'>"
+p220
+sS'paginas'
+p221
+S'1'
+sS'STRONG'
+p222
+S"<class 'gluon.html.STRONG'>"
+p223
+sS'CENTER'
+p224
+S"<class 'gluon.html.CENTER'>"
+p225
+sS'Auth'
+p226
+S"<class 'gluon.tools.Auth'>"
+p227
+sS'__builtins__'
+p228
+S"{'ArithmeticError': <type 'exceptions.ArithmeticError'>, 'AssertionError': <type 'exceptions.AssertionError'>, 'AttributeError': <type 'exceptions.AttributeError'>, 'BaseException': <type 'exceptions.BaseException'>, 'BufferError': <type 'exceptions.BufferError'>, 'BytesWarning': <type 'exceptions.BytesWarning'>, 'DeprecationWarning': <type 'exceptions.DeprecationWarning'>, 'EOFError': <type 'exceptions.EOFError'>, 'Ellipsis': Ellipsis, 'EnvironmentError': <type 'exceptions.EnvironmentError'>, ...}"
+p229
+sS'HTML'
+p230
+S"<class 'gluon.html.HTML'>"
+p231
+sS'SQLFORM'
+p232
+S"<class 'gluon.sqlhtml.SQLFORM'>"
+p233
+sS'dias'
+p234
+S'0'
+sS'_item'
+p235
+S"(<lazyT 'Neg\xc3\xb3cio'>, False, '/model_twelve/acs_empresa/index', [])"
+p236
+sS'LOAD'
+p237
+S'<function LOAD>'
+p238
+sS'redirect'
+p239
+S'<function redirect>'
+p240
+sS'FIELDSET'
+p241
+S"<class 'gluon.html.FIELDSET'>"
+p242
+sS'IS_EQUAL_TO'
+p243
+S"<class 'pydal.validators.IS_EQUAL_TO'>"
+p244
+sS'embed64'
+p245
+S'<function embed64>'
+p246
+sS'IS_LIST_OF'
+p247
+S"<class 'pydal.validators.IS_LIST_OF'>"
+p248
+sS'INPUT'
+p249
+S"<class 'gluon.html.INPUT'>"
+p250
+sS'EMBED'
+p251
+S"<class 'gluon.html.EMBED'>"
+p252
+sS'configuration'
+p253
+S"{'host': {'names': 'localhost:*, 127.0.0.1:*, *:...': 'sqlite://storage.sqlite', 'pool_size': '10'}}"
+p254
+sS'H2'
+p255
+S"<class 'gluon.html.H2'>"
+p256
+sS'H3'
+p257
+S"<class 'gluon.html.H3'>"
+p258
+sS'AppConfig'
+p259
+S'<function AppConfig>'
+p260
+sS'H1'
+p261
+S"<class 'gluon.html.H1'>"
+p262
+sS'H6'
+p263
+S"<class 'gluon.html.H6'>"
+p264
+sS'H4'
+p265
+S"<class 'gluon.html.H4'>"
+p266
+sS'H5'
+p267
+S"<class 'gluon.html.H5'>"
+p268
+sS'UL'
+p269
+S"<class 'gluon.html.UL'>"
+p270
+sS'IS_UPPER'
+p271
+S"<class 'pydal.validators.IS_UPPER'>"
+p272
+sS'xmlescape'
+p273
+S'<function xmlescape>'
+p274
+sS'IS_TIME'
+p275
+S"<class 'pydal.validators.IS_TIME'>"
+p276
+sS'empresa'
+p277
+S'<Row {\'total_horas_trabalhadas\': 1725L, \'valor_u...esa" = 1)>, \'quantidade_ultimos_registros\': 76L}>'
+p278
+sS'OPTION'
+p279
+S"<class 'gluon.html.OPTION'>"
+p280
+sS'TITLE'
+p281
+S"<class 'gluon.html.TITLE'>"
+p282
+sS'CRYPT'
+p283
+S"<class 'pydal.validators.CRYPT'>"
+p284
+sS'IS_EMPTY_OR'
+p285
+S"<class 'pydal.validators.IS_EMPTY_OR'>"
+p286
+sS'MARKMIN'
+p287
+S"<class 'gluon.html.MARKMIN'>"
+p288
+sS'__name__'
+p289
+S"'__restricted__'"
+p290
+sS'total'
+p291
+S'7'
+sS'COL'
+p292
+S"<class 'gluon.html.COL'>"
+p293
+sS'rows'
+p294
+S'<Rows (7)>'
+p295
+sS'SCRIPT'
+p296
+S"<class 'gluon.html.SCRIPT'>"
+p297
+sS'diferenca'
+p298
+S'datetime.timedelta(0)'
+p299
+sS'TABLE'
+p300
+S"<class 'gluon.html.TABLE'>"
+p301
+sS'IS_IPV4'
+p302
+S"<class 'pydal.validators.IS_IPV4'>"
+p303
+sS'IS_LENGTH'
+p304
+S"<class 'pydal.validators.IS_LENGTH'>"
+p305
+sS'IS_IPV6'
+p306
+S"<class 'pydal.validators.IS_IPV6'>"
+p307
+sS'XML'
+p308
+S"<class 'gluon.html.XML'>"
+p309
+sS'B'
+S"<class 'gluon.html.B'>"
+p310
+sS'IMG'
+p311
+S"<class 'gluon.html.IMG'>"
+p312
+sS'SQLTABLE'
+p313
+S"<class 'gluon.sqlhtml.SQLTABLE'>"
+p314
+sS'IS_MATCH'
+p315
+S"<class 'pydal.validators.IS_MATCH'>"
+p316
+sS'IS_ALPHANUMERIC'
+p317
+S"<class 'pydal.validators.IS_ALPHANUMERIC'>"
+p318
+sS'hj'
+p319
+S'datetime.date(2021, 7, 9)'
+p320
+sS'SPAN'
+p321
+S"<class 'gluon.html.SPAN'>"
+p322
+sS'IS_JSON'
+p323
+S"<class 'pydal.validators.IS_JSON'>"
+p324
+sS'IS_IPADDRESS'
+p325
+S"<class 'pydal.validators.IS_IPADDRESS'>"
+p326
+sS'IS_SLUG'
+p327
+S"<class 'pydal.validators.IS_SLUG'>"
+p328
+sS'totalinvestido'
+p329
+S'0'
+sS'BEAUTIFY'
+p330
+S"<class 'gluon.html.BEAUTIFY'>"
+p331
+sS'META'
+p332
+S"<class 'gluon.html.META'>"
+p333
+sS'BUTTON'
+p334
+S"<class 'gluon.html.BUTTON'>"
+p335
+sS'IS_DATE'
+p336
+S"<class 'pydal.validators.IS_DATE'>"
+p337
+sS'IS_EMAIL'
+p338
+S"<class 'pydal.validators.IS_EMAIL'>"
+p339
+sS'IS_NOT_EMPTY'
+p340
+S"<class 'pydal.validators.IS_NOT_EMPTY'>"
+p341
+sS'xrange'
+p342
+S"<type 'xrange'>"
+p343
+sS'TBODY'
+p344
+S"<class 'gluon.html.TBODY'>"
+p345
+sS'CAT'
+p346
+S"<class 'gluon.html.CAT'>"
+p347
+sS'Field'
+p348
+S"<class 'pydal.objects.Field'>"
+p349
+sS'IS_LIST_OF_EMAILS'
+p350
+S"<class 'pydal.validators.IS_LIST_OF_EMAILS'>"
+p351
+sS'pagina'
+p352
+S'1'
+sg58
+S"<Storage {'function': 'index', 'cookies': <Simpl...e, 'is_https': True, 'client': '191.212.144.51'}>"
+p353
+sS'DIV'
+p354
+S"<class 'gluon.html.DIV'>"
+p355
+sS'LEGEND'
+p356
+S"<class 'gluon.html.LEGEND'>"
+p357
+sS'to_native'
+p358
+S'<function to_native>'
+p359
+sS'COLGROUP'
+p360
+S"<class 'gluon.html.COLGROUP'>"
+p361
+sS'DAL'
+p362
+S"<class 'pydal.base.DAL'>"
+p363
+sS'ASSIGNJS'
+p364
+S'<function ASSIGNJS>'
+p365
+sS'TR'
+p366
+S"<class 'gluon.html.TR'>"
+p367
+sS'LI'
+p368
+S"<class 'gluon.html.LI'>"
+p369
+sS'TH'
+p370
+S"<class 'gluon.html.TH'>"
+p371
+sS'TD'
+p372
+S"<class 'gluon.html.TD'>"
+p373
+sS'IS_URL'
+p374
+S"<class 'pydal.validators.IS_URL'>"
+p375
+sS'A'
+S"<class 'gluon.html.A'>"
+p376
+sS'HEAD'
+p377
+S"<class 'gluon.html.HEAD'>"
+p378
+sS'IS_DATETIME_IN_RANGE'
+p379
+S"<class 'pydal.validators.IS_DATETIME_IN_RANGE'>"
+p380
+sS'FORM'
+p381
+S"<class 'gluon.html.FORM'>"
+p382
+sS'I'
+S"<class 'gluon.html.I'>"
+p383
+sS'IS_NOT_IN_DB'
+p384
+S"<class 'pydal.validators.IS_NOT_IN_DB'>"
+p385
+sS'IS_FILE'
+p386
+S"<class 'pydal.validators.IS_FILE'>"
+p387
+sg121
+S"<type 'datetime.date'>"
+p388
+sg123
+S"<Storage {'body': <cStringIO.StringO object at 0...71792a8>, 'view': 'acs_investimento/index.html'}>"
+p389
+sS'THEAD'
+p390
+S"<class 'gluon.html.THEAD'>"
+p391
+sS'ANY_OF'
+p392
+S"<class 'pydal.validators.ANY_OF'>"
+p393
+sS'IS_NULL_OR'
+p394
+S"<class 'pydal.validators.IS_EMPTY_OR'>"
+p395
+sS'IS_FLOAT_IN_RANGE'
+p396
+S"<class 'pydal.validators.IS_FLOAT_IN_RANGE'>"
+p397
+sS'IS_EXPR'
+p398
+S"<class 'pydal.validators.IS_EXPR'>"
+p399
+sS'T'
+S'<gluon.languages.TranslatorFactory object>'
+p400
+sS'IS_IN_SET'
+p401
+S"<class 'pydal.validators.IS_IN_SET'>"
+p402
+sS'IS_UPLOAD_FILENAME'
+p403
+S"<class 'pydal.validators.IS_UPLOAD_FILENAME'>"
+p404
+sS'TT'
+p405
+S"<class 'gluon.html.TT'>"
+p406
+sS'IS_DECIMAL_IN_RANGE'
+p407
+S"<class 'pydal.validators.IS_DECIMAL_IN_RANGE'>"
+p408
+sssS'traceback'
+p409
+S'Traceback (most recent call last):\n  File "/home/ArsenalSystem/web2py/gluon/restricted.py", line 219, in restricted\n    exec(ccode, environment)\n  File "/home/ArsenalSystem/web2py/applications/model_twelve/views/acs_investimento/index.html", line 261, in <module>\nNameError: name \'meses\' is not defined\n'
+p410
+s.
